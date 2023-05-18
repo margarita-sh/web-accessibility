@@ -21,17 +21,16 @@
             <a href="/" class="navbar-item logo-link">
               <img src="./img/logo.png" alt="Best Company logo">
             </a>
-            <button class="navbar-burger burger" data-target="navbarMenu" role="button"
-              aria-label="Toggle navigation menu">
+            <button class="navbar-burger burger" data-target="navbarMenu" aria-label="Open menu">
               <span></span>
               <span></span>
               <span></span>
             </button>
           </div>
 
-          <nav id="navbarMenu" class="navbar-menu" role="navigation" aria-label="skip navigation links">
+          <nav id="navbarMenu" class="navbar-menu" role="navigation" aria-label="Main Navigation">
             <ul class="navbar-end">
-              <span class="navbar-item">
+              <span class="navbar-item" aria-label="home">
                 <a href="#home" class="button is-white is-outlined">
                   <span class="visually-hidden">skip to home</span>
                   <span class="icon">
@@ -41,7 +40,7 @@
                 </a>
               </span>
               <span class="navbar-item">
-                <a href="#services" class="button is-white is-outlined with-sublist">
+                <a href="#services" class="button is-white is-outlined with-sublist" aria-label="services">
                   <span class="visually-hidden">skip to services content</span>
                   <span class="icon">
                     <i class="fab fa-superpowers"></i>
@@ -56,8 +55,8 @@
                   <li>Optimize</li>
                 </ul>
               </span>
-              <span class="navbar-item">
-                <a href="#stories" class="button is-white is-outlined">
+              <span class="navbar-item" aria-label="success stories">
+                <a href="#pane-1" class="button is-white is-outlined">
                   <span class="visually-hidden">skip to success stories content</span>
                   <span class="icon">
                     <i class="fa fa-book"></i>
@@ -65,7 +64,7 @@
                   <span>Success stories</span>
                 </a>
               </span>
-              <span class="navbar-item">
+              <span class="navbar-item" aria-label="view source">
                 <a href="#source" class="button is-white is-outlined">
                   <span class="visually-hidden">skip to view source content</span>
                   <span class="icon">
@@ -80,12 +79,12 @@
       </div>
     </div>
 
-    <section>
-      <nav aria-label="Breadcrumb" class="app-breadcrumb">
+    <section aria-label="Breadcrumb">
+      <nav class="app-breadcrumb">
         <ol>
           <li class="breadcrumb-item"><a href="#home">Home</a></li>
           <li class="breadcrumb-item"><a href="#services">Services</a></li>
-          <li class="breadcrumb-item"><a href="#stories">Success stories</a></li>
+          <li class="breadcrumb-item"><a href="#pane-1">Success stories</a></li>
           <li class="breadcrumb-item active" aria-current="page"><a href="#source">View Source</a></li>
         </ol>
       </nav>
@@ -110,9 +109,8 @@
           <div class="box has-background-grey-light">
             <div class="field is-grouped">
               <p class="control is-expanded">
-                <label for="eventSubscription" class="visually-hidden">enter your email to subscribe to our
-                  events</label>
-                <input class="input" id="eventSubscription">
+                <label for="eventSubscription" class="visually-hidden">search events</label>
+                <input class="input" id="eventSubscription" aria-label="search">
               </p>
               <p class="control">
                 <button class="button is-info">Notify Me</button>
@@ -122,7 +120,7 @@
         </div>
       </div>
 
-      <section class="section" id="about" aria-label="about us section, what contains our history section">
+      <section class="section" id="about" aria-label="about us section, that contains our history section">
         <div class="section-heading has-text-centered">
           <h2 class="title is-2">About Us</h2>
           <h4 class="subtitle is-5">We of all trades, master of "some"</h4>
@@ -160,22 +158,22 @@
 
 
 
-          <table>
+          <table role="table" aria-label="Upcoming plans for 2023">
             <caption>Upcoming plans for 2023</caption>
-            <thead>
-              <tr>
-                <th>Header</th>
-                <th>Header</th>
+            <thead role="rowgheader">
+              <tr role="row">
+                <th role="columnheader">Header</th>
+                <th role="columnheader">Header</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>cell</td>
-                <td>cell</td>
+            <tbody role="rowgroup">
+              <tr role="row">
+                <td role="cell">cell</td>
+                <td role="cell">cell</td>
               </tr>
-              <tr>
-                <td>cell</td>
-                <td>cell</td>
+              <tr role="row">
+                <td role="cell">cell</td>
+                <td role="cell">cell</td>
               </tr>
             </tbody>
           </table>
@@ -210,21 +208,21 @@
           </div>
         </div>
         <div class="tabs is-boxed is-centered main-menu" id="nav">
-          <ul>
-            <li data-target="pane-1" id="1" class="is-active">
-              <a href="#">
+          <ul role="tablist">
+            <li data-target="pane-1" id="1" class="is-active" role="tab">
+              <a href="#pane-1" aria-controls="pane-1" aria-selected="true" aria-label="Click to go to Success stories page">
                 <span class="icon is-small"><i class="fa fa-image"></i></span>
-                <span id="stories">Success stories</span>
+                <span>Success stories</span>
               </a>
             </li>
-            <li data-target="pane-3" id="3">
-              <a href="#">
+            <li data-target="pane-3" id="3" role="tab">
+              <a href="#pane-3" aria-controls="pane-3" aria-selected="false" aria-label="Click to read about our team">
                 <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
                 <span>Our team</span>
               </a>
             </li>
-            <li data-target="pane-4" id="4">
-              <a href="#">
+            <li data-target="pane-4" id="4" role="tab">
+              <a href="#pane-4" aria-controls="inspiredVideo" aria-selected="false" aria-label="Click to watch video">
                 <span class="icon is-small"><i class="fa fa-film"></i></span>
                 <span>Video</span>
               </a>
@@ -234,7 +232,7 @@
       </section>
 
       <div class="tab-content container">
-        <div class="tab-pane is-active" id="pane-1" class="level">
+        <div class="tab-pane is-active" id="pane-1" role="tabpanel" aria-labelledby="1">
           <div class="container">
             <div class="columns features">
               <div class="column is-6">
@@ -251,7 +249,8 @@
                         accessibility.
                       </p>
                       <p>That's a real magic!</p>
-                      <button class="button is-link modal-button" data-target="modal-image1">Learn more</button>
+                      <button class="button is-link modal-button" data-target="modal-image1" aria-haspopup="true">Learn
+                        more</button>
                     </div>
                   </div>
                 </div>
@@ -269,7 +268,8 @@
                       <p>We were not so sure in success but we have had lots of new customers after implementing
                         accessibility.</p>
                       <p>We will recommend Best Company to our friends!</p>
-                      <button class="button is-link modal-button" data-target="modal-card">Learn more</button>
+                      <button class="button is-link modal-button" data-target="modal-card" aria-haspopup="true">Learn
+                        more</button>
                     </div>
                   </div>
                 </div>
@@ -278,7 +278,7 @@
           </div>
         </div>
 
-        <div class="tab-pane" id="pane-3">
+        <div class="tab-pane" id="pane-3" role="tabpanel" aria-labelledby="3">
           <div class="columns medias">
             <div class="column">
               <div class="media">
@@ -313,7 +313,7 @@
           </div>
         </div>
 
-        <div class="tab-pane" id="pane-4">
+        <div class="tab-pane" id="pane-4" role="tabpanel" aria-labelledby="4">
           <div class="columns is-centered">
             <div class="column is-three-quarters">
               <h3 class="title has-text-centered">Inspired video</h3>
@@ -373,14 +373,15 @@
               <div class="field">
                 <label class="label" for="name">Name</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Text input" id="name">
+                  <input class="input" type="text" placeholder="Text input" id="name"
+                    aria-placeholder="Enter your name">
                 </div>
               </div>
 
               <div class="field">
                 <label class="label" for="username">Username</label>
                 <div class="control has-icons-left has-icons-right">
-                  <input class="input is-success" type="text" id="username">
+                  <input class="input is-success" type="text" id="username" aria-placeholder="Enter your username">
                   <span class="icon is-small is-left">
                     <i class="fas fa-user"></i>
                   </span>
@@ -394,7 +395,8 @@
               <div class="field">
                 <label class="label" for="email">Email</label>
                 <div class="control has-icons-left has-icons-right">
-                  <input class="input is-danger" type="email" placeholder="Email input" value="hello@" id="email">
+                  <input class="input is-danger" type="email" placeholder="Email input" value="hello@" id="email"
+                    aria-placeholder="Enter your email" aria-describedby="emailNote">
                   <span class="icon is-small is-left">
                     <i class="fas fa-envelope"></i>
                   </span>
@@ -402,14 +404,14 @@
                     <i class="fas fa-exclamation-triangle"></i>
                   </span>
                 </div>
-                <p class="help is-danger">This email is invalid</p>
+                <p class="help is-danger" id="emailNote" aria-label="This email is invalid">This email is invalid</p>
               </div>
             </fieldset>
             <div class="field">
               <label class="label" for="subject">Subject</label>
               <div class="control">
                 <div class="select">
-                  <select id="subject">
+                  <select id="subject" aria-haspopup="true">
                     <option>Select dropdown</option>
                     <option>With options</option>
                   </select>
@@ -420,7 +422,8 @@
             <div class="field">
               <label class="label" for="message">Message</label>
               <div class="control">
-                <textarea class="textarea" placeholder="Textarea" id="message"></textarea>
+                <textarea class="textarea" placeholder="Textarea" id="message"
+                  aria-placeholder="Enter your message"></textarea>
               </div>
             </div>
 
@@ -434,13 +437,15 @@
             </div>
 
             <div class="field">
-              <div class="control">
+              <div class="control" role="radiogroup">
                 <label class="radio" for="yesAnswer">
-                  <input type="radio" name="question" id="yesAnswer">
+                  <input type="radio" role="radio" name="question" id="yesAnswer"
+                    aria-placeholder="Select Yes if you agree with terms and conditions">
                   Yes
                 </label>
                 <label class="radio" for="noAnswer">
-                  <input type="radio" name="question" id="noAnswer">
+                  <input type="radio" role="radio" name="question" id="noAnswer"
+                    aria-placeholder="Select No if you agree with terms and conditions">
                   No
                 </label>
               </div>
@@ -448,10 +453,10 @@
 
             <div class="field is-grouped">
               <div class="control">
-                <button class="button is-link" role="button">Submit</button>
+                <button class="button is-link" aria-label="submit your form">Submit</button>
               </div>
               <div class="control">
-                <button class="button is-text" role="button">Cancel</button>
+                <button class="button is-text" aria-label="remove your data from the form">Cancel</button>
               </div>
             </div>
           </form>
@@ -466,7 +471,7 @@
           </div>
           <div class="columns">
             <div class="column is-3">
-              <button class="button is-primary is-block is-alt is-large">New Post</button>
+              <button class="button is-primary is-block is-alt is-large" aria-label="create new post">New Post</button>
             </div>
             <div class="column is-9">
               <div class="box content">
@@ -487,7 +492,8 @@
                       </div>
                     </div>
                     <div class="media-right">
-                      <button class="has-text-grey-light text-button"><i class="fa fa-comments"></i> 1</button>
+                      <button class="has-text-grey-light text-button" aria-label="comments"><i
+                          class="fa fa-comments"></i> 1</button>
                     </div>
                   </div>
                 </div>
@@ -509,7 +515,8 @@
                       </div>
                     </div>
                     <div class="media-right">
-                      <button class="has-text-grey-light text-button"><i class="fa fa-comments"></i> 0</button>
+                      <button class="has-text-grey-light text-button"><i class="fa fa-comments"
+                          aria-label="comments"></i> 0</button>
                     </div>
                   </div>
                 </div>
@@ -541,21 +548,26 @@
 
         <div class="content has-text-centered">
           <div class="soc">
-            <a href="#" title="Alertbox: By clicking on the link, you can access to our github repository"><i
+            <a href="#" title="Alertbox: By clicking on the link, you can access to our github repository"
+              aria-label="By clicking on the link, you can access to our github repository, this link will be opened in a new window"><i
                 class="fab fa-github-alt fa-2x"><span class="visually-hidden">Opens in a new window</span></i></a>
-            <a href="#" title="Alertbox: By clicking on the link, you can access to our youtube channel"><i
+            <a href="#" title="Alertbox: By clicking on the link, you can access to our youtube channel"
+              aria-label="By clicking on the link, you can access to our youtube channel, this link will be opened in a new window"><i
                 class="fab fa-youtube fa-2x"><span class="visually-hidden">Opens in a new window</span></i></a>
           </div>
           <p id="source"> The source code is licensed <a href="http://opensource.org/licenses/mit-license.php"
               class="external-link"
-              title="Alertbox: By clicking on the link, you can access the MIT License page on the Open Source Initiative website and learn more about the license and its terms.">MIT
+              title="Alertbox: By clicking on the link, you can access the MIT License page on the Open Source Initiative website and learn more about the license and its terms."
+              aria-label="By clicking on the link, you can access the MIT License page, this link will be opened in a new window">MIT
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              <span class="visually-hidden">Opens in a new window</span></a></p>
+              <span class="visually-hidden">Opens in a new window</span></a>
+          </p>
+
         </div>
       </div>
     </div>
 
-    <div id="modal-card" class="modal modal-fx-3dSlit">
+    <div id="modal-card" class="modal modal-fx-3dSlit" role="dialog" aria-modal="true" aria-labelledby="best-airways">
       <div class="modal-background"></div>
       <div class="modal-content is-tiny">
         <div class="card">
@@ -567,7 +579,7 @@
           <div class="card-content">
             <div class="media">
               <div class="media-content">
-                <h2 class="title is-4">Best airways</h2>
+                <h2 id="best-airways" class="title is-4">Best airways</h2>
                 <h4 class="subtitle is-6">Our way to success</h4>
               </div>
             </div>
@@ -581,15 +593,15 @@
           </div>
         </div>
       </div>
-      <button class="modal-close is-large" role="button"></button>
+      <button class="modal-close is-large"></button>
     </div>
 
-    <div id="modal-image1" class="modal modal-fx-3dSlit">
+    <div id="modal-image1" class="modal modal-fx-3dSlit" role="dialog" aria-modal="true">
       <div class="modal-background"></div>
       <div class="modal-content is-huge is-image">
         <img src="https://source.unsplash.com/random/?sig=1" aria-hidden="true">
       </div>
-      <button class="modal-close is-large" role="button"></button>
+      <button class="modal-close is-large"></button>
     </div>
   </footer>
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
