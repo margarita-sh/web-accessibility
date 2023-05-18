@@ -29,50 +29,60 @@
           </div>
 
           <nav id="navbarMenu" class="navbar-menu" role="navigation" aria-label="Main Navigation">
-            <ul class="navbar-end">
-              <span class="navbar-item" aria-label="home">
-                <a href="#home" class="button is-white is-outlined">
+            <ul class="navbar-end" role="menubar">
+              <li class="navbar-item">
+                <a href="#home" class="button is-white is-outlined" role="menuitem" aria-label="home">
+                  Home
                   <span class="visually-hidden">skip to home</span>
                   <span class="icon">
                     <i class="fa fa-home"></i>
                   </span>
-                  <span>Home</span>
                 </a>
-              </span>
-              <span class="navbar-item">
-                <a href="#services" class="button is-white is-outlined with-sublist" aria-label="services">
+              </li>
+              <li class="navbar-item">
+                <a href="#" id="servicesLink" class="button is-white is-outlined with-sublist" role="menuitem" aria-label="services" aria-expanded="false" aria-haspopup="true">
+                  Services
                   <span class="visually-hidden">skip to services content</span>
                   <span class="icon">
                     <i class="fab fa-superpowers"></i>
                   </span>
-                  <span>Services</span>
                 </a>
-                <ul class="sublist hidden">
-                  <li>Design</li>
-                  <li>Consult</li>
-                  <li>Engineer</li>
-                  <li>Operate</li>
-                  <li>Optimize</li>
+                <ul class="sublist hidden" role="menu" id="servicesMenu">
+                  <li role="none" aria-label="design">
+                    <a role="menuitem" href="#" tabindex="-1">Design</a>
+                  </li>
+                  <li role="none" aria-label="consult">
+                    <a role="menuitem" href="#" tabindex="-1">Consult</a>
+                  </li>
+                  <li role="none" aria-label="engineer">
+                    <a role="menuitem" href="#" tabindex="-1">Engineer</a>
+                  </li>
+                  <li role="none" aria-label="operate">
+                    <a role="menuitem" href="#" tabindex="-1">Operate</a>
+                  </li>
+                  <li role="none" aria-label="optimize">
+                    <a role="menuitem" href="#" tabindex="-1">Optimize</a>
+                  </li>
                 </ul>
-              </span>
-              <span class="navbar-item" aria-label="success stories">
-                <a href="#pane-1" class="button is-white is-outlined">
+              </li>
+              <li class="navbar-item">
+                <a href="#pane-1" class="button is-white is-outlined" role="menuitem" aria-label="success stories">
+                  Success stories
                   <span class="visually-hidden">skip to success stories content</span>
                   <span class="icon">
                     <i class="fa fa-book"></i>
                   </span>
-                  <span>Success stories</span>
                 </a>
-              </span>
-              <span class="navbar-item" aria-label="view source">
-                <a href="#source" class="button is-white is-outlined">
+              </li>
+              <li class="navbar-item">
+                <a href="#source" class="button is-white is-outlined" role="menuitem" aria-label="view source">
+                  View Source
                   <span class="visually-hidden">skip to view source content</span>
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
-                  <span>View Source</span>
                 </a>
-              </span>
+              </li>
             </ul>
           </nav>
         </div>
@@ -156,8 +166,6 @@
           <h3 class="is-2 title">2023</h3>
           <p>Please take a look at our plans</p>
 
-
-
           <table role="table" aria-label="Upcoming plans for 2023">
             <caption>Upcoming plans for 2023</caption>
             <thead role="rowgheader">
@@ -222,7 +230,7 @@
               </a>
             </li>
             <li data-target="pane-4" id="4" role="tab">
-              <a href="#pane-4" aria-controls="inspiredVideo" aria-selected="false" aria-label="Click to watch video">
+              <a href="#pane-4" aria-controls="pane-4" aria-selected="false" aria-label="Click to watch video">
                 <span class="icon is-small"><i class="fa fa-film"></i></span>
                 <span>Video</span>
               </a>
@@ -606,6 +614,8 @@
   </footer>
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
   <script async src="js/custom.js"></script>
+  <script async src="js/tabs.js"></script>
+  <script async src="js/menu.js"></script>
 </body>
 
 </html>
